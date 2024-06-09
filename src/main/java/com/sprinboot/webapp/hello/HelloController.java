@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloController {
 	
 	@RequestMapping("say-hello")
-	@ResponseBody // should add this here or else the api will not work as @REsponseBody will let us retrun as it is.
+	@ResponseBody // should add this here or else the api will not work as @REsponseBody will let us return as it is.
 	public String sayHello() {
 		return "Hello!";
 	}
