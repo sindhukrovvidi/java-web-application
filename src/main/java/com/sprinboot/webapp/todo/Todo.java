@@ -1,20 +1,24 @@
 package com.sprinboot.webapp.todo;
 
 import java.time.LocalDate;
+import jakarta.validation.constraints.Size; 
 
 public class Todo {
 	private int id;
 	private String username;
+	
+	@Size(min=10, message="Min char length should be 10")
 	private String description;
-	private LocalDate targetDate;
+	
+	private LocalDate date;
 	private boolean done;
 	
-	public Todo(int id, String username, String description, LocalDate targetDate, boolean done) {
+	public Todo(int id, String username, String description, LocalDate date, boolean done) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.description = description;
-		this.targetDate = targetDate;
+		this.date = date;
 		this.done = done;
 	}
 
@@ -42,12 +46,12 @@ public class Todo {
 		this.description = description;
 	}
 
-	public LocalDate getTargetDate() {
-		return targetDate;
+	public LocalDate getDate() {
+		return date;
 	}
 
-	public void setTargetDate(LocalDate targetDate) {
-		this.targetDate = targetDate;
+	public void setDate(LocalDate date) {
+		this.date = date;
 	}
 
 	public boolean isDone() {
@@ -61,7 +65,7 @@ public class Todo {
 	@Override
 	public String toString() {
 		return "Todo [id=" + id + ", username=" + username + ", description=" + description + ", targetDate="
-				+ targetDate + ", done=" + done + "]";
+				+ date + ", done=" + done + "]";
 	}
 	
 	
