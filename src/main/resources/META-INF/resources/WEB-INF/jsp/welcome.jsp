@@ -1,11 +1,11 @@
-<!DOCTYPE html>
 <html>
-<body>
-
-<h1>Welcome Page ${name } and password ${password }</h1>
-
-<p>My first paragraph.</p>
-
-</body>
+	<head>
+		<title>Welcome Page</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Welcome ${name}</h1>
+			<a href="list-todos">Manage</a> your todos
+		</div>
+	</body>
 </html>
-
