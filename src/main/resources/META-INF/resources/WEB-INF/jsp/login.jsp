@@ -1,9 +1,5 @@
-<html>
-	<head>
-		<title>Login Page</title>
-	</head>
-	<body>
-	
+<%@ include file="common/header.jspf"%>
+<%@ include file="common/navigation.jspf"%>
 		<div class="container">
 			<h1>Login</h1>
 			<pre>${errorMessage}</pre>
@@ -14,5 +10,4 @@
 			</form>
 		</div>
 		 
-	</body>
-</html>
+<%@ include file="common/footer.jspf"%>
